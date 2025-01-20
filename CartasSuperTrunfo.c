@@ -13,7 +13,7 @@ int main()
     // código da cidade
     int cod_cidade;
     // nome
-    char nome_cidade;
+    char nome_cidade[20];
     // população
     float populacao_cidade;
     // área
@@ -30,26 +30,38 @@ int main()
 
     // codigo
     printf("\n Digite o código da cidade:");
-    scanf("%i", cod_cidade);
+    scanf("%i", &cod_cidade);
     // nome
     printf("\n Digite o nome da cidade:");
     scanf("%s", nome_cidade);
     // população
     printf("\n Digite o número total da população:");
-    scanf("%2f", populacao_cidade);
+    scanf("%f", &populacao_cidade);
     // área
     printf("\n Digite a área da cidade:");
-    scanf("%2f", area_cidade);
+    scanf("%f", &area_cidade);
     // PIB
     printf("\n Digite o valor do PIB da cidade:");
-    scanf("%f", pib_cidade);
+    scanf("%f", &pib_cidade);
     // número de pontos turísticos
     printf("\n Digite a quantidade de pontos turisticos da cidade:");
-    scanf("%i", num_pontos_tur_cidade);
+    scanf("%i", &num_pontos_tur_cidade);
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
+    printf("\nCidade cadastrada com sucesso!\n");
+    // imprime codigo
+    printf("Código: %d\n", cod_cidade);
+    // imprime nome
+    printf("Nome: %s\n", nome_cidade);
+    // imprime populacao
+    printf("População: %.2f\n", populacao_cidade);
+    // imprime area
+    printf("Área: %.1lf km²\n", area_cidade);
+    // imprime pib
+    printf("PIB: %.1lf bilhões\n", pib_cidade);
+    // imprime numero de pontos
+    printf("Pontos turísticos: %d\n", num_pontos_tur_cidade);
     return 0;
 }
